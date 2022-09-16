@@ -1,0 +1,8 @@
+<h2 class="login__title">¡Te damos la bienvenida!</h2>
+
+<div class="login__providers-container">
+  <button mat-stroked-button (click)="handleLogin('email')">Iniciar sesion con Email</button>
+  <button mat-stroked-button (click)="handleLogin('google')">Iniciar sesion con Google</button>
+
+  <button mat-button class="login__new-user" (click)="goToRegister()">¿Aún no tienes una cuenta?</button>
+</div>

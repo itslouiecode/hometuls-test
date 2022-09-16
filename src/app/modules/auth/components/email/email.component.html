@@ -1,0 +1,20 @@
+
+<form class="email-form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+  <h2 class="email-form__title">Inicia Sesión</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="pat@example.com" formControlName="email" required>
+    <mat-error>{{getEmailErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput placeholder="*****" formControlName="password" type="password" required>
+    <mat-error>Campo requerido</mat-error>
+  </mat-form-field>
+
+  <mat-error *ngIf="loginError$ | async">Email o contraseña erroneo</mat-error>
+
+  <button mat-raised-button class="email-form__submit-button" color="primary" type="submit" [disabled]="!emailForm.valid">Iniciar Sesión</button>
+</form>

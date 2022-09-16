@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "technical-test-hometuls": {
+      "hosting": {
+        "technical-test": [
+          "technical-test-hometuls"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "technical-test-hometuls"
+  }
+}
